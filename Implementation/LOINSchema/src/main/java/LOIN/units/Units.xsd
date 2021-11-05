@@ -1,0 +1,541 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Units"
+    targetNamespace="http://tempuri.org/Units.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/Units.xsd"
+    xmlns:mstns="http://tempuri.org/Units.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:simpleType name="SIUnitName">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="metre">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: length
+            Symbol: m
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="kilogram">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: mass
+            Symbol: kg
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="second">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: time
+            Symbol: s
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="ampere">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: electric current
+            Symbol: A
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="kelvin">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: thermodynamic temperature
+            Symbol: K
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="mole">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: amount of substance
+            Symbol: mol
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="candela">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: luminous intensity
+            Symbol: cd
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="radian">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: plane angle
+            Symbol: rad
+            Expression: rad = m/m = 1
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="steradian">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: solid angle
+            Symbol: sr
+            Expression: sr = m2/m2 = 1
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="hertz">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: frequency
+            Symbol: Hz
+            Expression: Hz = s−1
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="newton">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: force
+            Symbol: N
+            Expression: N = kg · m/s2
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="pascal">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: pressure
+            Symbol: stress
+            Expression: Pa	Pa = N/m2
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="joule">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: energy
+            Symbol: J
+            Expression: J = N · m
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="watt">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: power
+            Symbol: W
+            Expression: W = J/s
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="coulomb">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: electric charge
+            Symbol: C
+            Expression: C = A · s
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="volt">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: electric potential difference
+            Symbol: V
+            Expression: V = W/A
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="farad">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: capacitance
+            Symbol: F
+            Expression: F = C/V
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="ohm">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: electric resistance
+            Symbol: Ω
+            Expression: Ω = V/A
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="siemens">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: electric conductance
+            Symbol: S
+            Expression: S = Ω−1
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="weber">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: magnetic flux
+            Symbol: Wb
+            Expression: Wb = V · s
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="tesla">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: magnetic flux density
+            Symbol: T
+            Expression: T = Wb/m2
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="henry">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: inductance
+            Symbol: H
+            Expression: H = Wb/A
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="degree_Celsius">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: Celsius temperature
+            Symbol: ºC
+            Expression: ºC = K
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="lumen">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: luminous flux
+            Symbol: lm
+            Expression: lm = cd · sr
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="lux">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: illuminance
+            Symbol: lx
+            Expression: lx = lm/m2
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="becquerel">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: activity (of a radionuclide)
+            Symbol: Bq
+            Expression: Bq = s−1
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="gray">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: absorbed dose
+            Symbol: Gy
+            Expression: Gy = J/kg
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="sievert">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: dose equivalent
+            Symbol: Sv
+            Expression: Sv = J/kg
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="katal">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Quantity: catalytic activity
+            Symbol: kat
+            Expression: kat = mol/s
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SIUnitPrefix">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="yotta">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Power: 10^24
+            Symbol: Y
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="zetta">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Power: 10^21
+            Symbol: Z
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="exa">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Power: 10^18
+            Symbol: E
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="peta">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Power: 10^15
+            Symbol: P
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="tera">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Power: 10^12
+            Symbol: T
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="giga">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Power: 10^9
+            Symbol: G
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="mega">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Power: 10^6
+            Symbol: M
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="kilo">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Power: 10^3
+            Symbol: k
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="hecto">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Power: 10^2
+            Symbol: h
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="deca">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Power: 10^1 d
+            Symbol: a
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="deci">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Power: 10^−1
+            Symbol: d
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="centi">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Power: 10^−2
+            Symbol: c
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="milli">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Power: 10^−3
+            Symbol: m
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="micro">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Power: 10^−6
+            Symbol: μ
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="nano">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Power: 10^−9
+            Symbol: n
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="pico">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Power: 10^−12
+            Symbol: p
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="femto">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Power: 10^−15
+            Symbol: f
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="atto">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Power: 10^−18
+            Symbol: a
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="zepto">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Power: 10^−21
+            Symbol: z
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+      <xs:enumeration value="yocto">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">
+            Power: 10^−24
+            Symbol: y
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="TUnit" abstract="true">
+
+  </xs:complexType>
+
+  <xs:complexType name="TSIUnit">
+    <xs:complexContent>
+      <xs:extension base="TUnit">
+        <xs:attribute name="Name" type="SIUnitName" use="required"/>
+        <xs:attribute name="Prefix" type="SIUnitPrefix" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="TDerivedUnit">
+    <xs:complexContent>
+      <xs:extension base="TUnit">
+        <xs:sequence>
+          <xs:element name="Component" minOccurs="1" maxOccurs="unbounded">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Unit" type="TSIUnit" minOccurs="1"/>
+              </xs:sequence>
+              <xs:attribute name="Exponent" type="xs:integer" use="required"/>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="TConversionUnit">
+    <xs:complexContent>
+      <xs:extension base="TUnit">
+        <xs:sequence>
+          <xs:element name="BaseUnit" type="TUnit" minOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="Name" type="xs:string" use="required"/>
+        <xs:attribute name="Symbol" type="xs:string" use="required"/>
+        <xs:attribute name="Scale" type="xs:double" default="1"/>
+        <xs:attribute name="Offset" type="xs:double" default="0"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="TContextDependentUnit">
+    <xs:complexContent>
+      <xs:extension base="TUnit">
+        <xs:attribute name="Name" type="xs:string" use="required"/>
+        <xs:attribute name="Symbol" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="TMonetaryUnit">
+    <xs:complexContent>
+      <xs:extension base="TUnit">
+        <xs:attribute name="Currency" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>
